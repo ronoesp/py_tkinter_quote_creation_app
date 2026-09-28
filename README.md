@@ -35,5 +35,6 @@ py_tkinter_quote_creation_app/
 ・エディタ：VisualStudioCode
 
 ## その他
-・scripts フォルダの app_quote_creation.py から実行可能 
+・scripts フォルダの app_quote_creation.py から実行可能
+
 ※実行すると同階層に「DB」フォルダが作成され、この中にデータベースファイルが作成される。
