@@ -1,0 +1,9 @@
+■実行するスクリプト
+gui_manager.py
+
+■画面変更
+「1」キー入力：メイン画面へ
+「2」キー入力：設定画面へ
+
+■仕組みについて
+tk_gui_base.pyの「def set_frame_change_event()」関数に記載あり

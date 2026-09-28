@@ -1,0 +1,25 @@
+# ＝＝＝勉強用メモ＝＝＝
+    # 変更点の解説
+    # record（辞書）をそのままself.settings_dataにせず、SettingsData(...)のコンストラクタに詰め替えている
+    # Entryへの値のセット部分も、辞書のキーアクセス（self.settings_data[data["column"]]）から、
+    # dataclassの属性アクセス（getattr(self.settings_data, data["column"])）に変更が必要
+    
+    # save_data側も同様の修正が必要
+    # こちらも、self.settings_data[data["column"]] = ...という辞書的な書き方から、
+    # setattr(self.settings_data, data["column"], ...)というdataclass向けの書き方に変える必要があります。
+
+    # なぜgetattr/setattrを使うのか
+
+    # column_list（"tax_rate", "company_name"など）は文字列として持っているため、
+    # self.settings_data.tax_rateのように直接書くことができません（列名が実行時にしか分からないため）。
+    # getattr(obj, "属性名")・setattr(obj, "属性名", 値)は、文字列で指定した名前の属性に、
+    # 間接的にアクセスするためのPython標準の仕組みです。
+
+
+■getter
+# getter(A,B)：インスタンス（実体）Aの変数名がBのデータを取得
+# 「self.settings_dataというインスタンスの中の、data["column"]という名前の属性の値を取得する」
+
+■setter
+# setattr(A,B,C)：インスタンス（実体）Aの変数名がBである変数の値をCに設定する
+# 「self.settings_dataというインスタンスの中の、data["column"]という名前の属性に、data["entry"].get()の値を設定する」

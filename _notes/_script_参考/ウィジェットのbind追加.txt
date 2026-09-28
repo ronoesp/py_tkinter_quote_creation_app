@@ -1,0 +1,13 @@
+■Entryの<FocusOut>イベント時に複数の関数を実行させたい
+# ↓参考：addした順に実行される。[add="+"]がないと上書きとなり、その関数のみが実行されるようになる
+# entry.bind("<FocusOut>", func_a, add="+")
+# entry.bind("<FocusOut>", func_b, add="+")
+# entry.bind("<FocusOut>", func_c, add="+")
+1.func_a が実行される
+2.func_b が実行される
+3.func_c が実行される
+
+# [add="+"]がないと上書きとなり、その関数のみが実行されるようになる
+# entry.bind("<FocusOut>", func_d)
+1.func_d が実行される
+　→func_a / func_b / func_c が実行されなくなる

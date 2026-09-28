@@ -1,21 +1,39 @@
-【環境】<br>
-言語：Python3<br>
-GUI：Tkinter<br>
-DB：SQLite<br>
-エディタ：VisualStudioCode<br>
-<br>
-【概要】<br>
-・見積書を作成するための簡易アプリ<br>
-・GUIアプリ開発、DBの使用方法についての学習のため作成<br>
-<br>
-【その他】<br>
-・Scripts フォルダの app_quote_creation.py から実行可能<br>
-・実行ファイル：App > app_quote_creation.exe<br>
-・インストーラー：Installer > mysetup.exe<br>
-※実行すると同階層に「DB」フォルダが作成され、この中にデータベースファイルが作成される。<br>
-<br>
-【今後の予定】<br>
-・コードの整理と機能分離<br>
-<br>
-【更新履歴】<br>
-2026/09/14　Ver1.0完成<br>
+# 見積書作成アプリ（py_tkinter_quote_creation_app）
+
+Tkinterで作成した簡易見積書作成アプリのリポジトリです。
+
+**PC版（インストーラー）のダウンロード**
+https://github.com/ronoesp/py_tkinter_quote_creation_app/releases/latest
+
+---
+
+## 提供しているバージョン
+
+| バージョン | 実行環境 | 特徴 |
+|---|---|---|
+| PC版 | Windows（要インストール） | Tkinter製。exe/インストーラーをReleasesで配布 |
+
+## フォルダ構成
+
+```
+py_tkinter_quote_creation_app/
+├── scripts/              # PC版（Tkinter）のソースコード
+├── docs-project/          # 要件定義書・詳細設計書
+├── notes/                 # 学習メモ
+└── README.md              # このファイル
+```
+
+## 実行方法
+
+### PC版
+[Releases](https://github.com/ronoesp/py_tkinter_quote_creation_app/releases/latest) からインストーラーをダウンロードし、実行してください。
+
+## 制作環境
+・言語：Python3
+・GUI：Tkinter
+・DB：SQLite
+・エディタ：VisualStudioCode
+
+## その他
+・scripts フォルダの app_quote_creation.py から実行可能
+※実行すると同階層に「DB」フォルダが作成され、この中にデータベースファイルが作成される。
